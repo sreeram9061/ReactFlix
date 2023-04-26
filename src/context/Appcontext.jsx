@@ -9,12 +9,12 @@ const AppcontextWrapper=({children})=>{
     let favoriteData=localStorage.getItem('AppState')
 
     useEffect(()=>{
-    if(JSON.parse(JSON.parse(favoriteData).length>0)){
-        dispath({
-            type:'LOCAL_STORAGE_DATA',
-            payload:JSON.parse(favoriteData)
-        })
-    }
+        favoriteData &&(
+            dispath({
+                type:'LOCAL_STORAGE_DATA',
+                payload:JSON.parse(favoriteData)
+            })
+        )
     },[])
 
     useEffect(()=>{
