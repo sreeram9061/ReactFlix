@@ -5,6 +5,8 @@ import MovieCard from "../Components/MovieCard";
 import Pagination from "../Components/Pagination";
 import { Appcontext } from "../context/Appcontext";
 import { useContext } from "react";
+import ErrorMsg from "../Expotions/ErrorMsg";
+import LoadingMessages from "../Expotions/LaodingMsg";
 
 
 const Home=()=>{
@@ -14,8 +16,8 @@ const Home=()=>{
     const{results,total_pages}=data
     return(
         <>
-        {loading && <p style={{textAlign:'center'}}>loading...</p>}
-       {error && <p style={{textAlign:'center'}} >{error}</p>}
+        {loading && <LoadingMessages />}
+       {error && <ErrorMsg {...{error}}/> }
        {!error && !loading &&(
              <>
                  <div className="movieSlider">

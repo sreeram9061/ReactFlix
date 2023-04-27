@@ -338,3 +338,26 @@ footer {
     }
   }
 }
+
+
+//Error msg
+.containerErrorMsg{
+  width: 100%;
+  @include flexbox(row,center,center,0);
+  height: 500px;
+  .boxcontainer{
+    @include flexbox(column, center, center, 0);
+    width: fit-content;
+    padding: 30px 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    h2{
+      padding-bottom: 5px ;
+    }
+    p{
+      border-top: 2px solid $stone700;
+      padding-top: 5px;
+    }
+  }
+
+}

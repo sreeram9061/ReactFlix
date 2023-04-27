@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { useFetch } from "../Hocks/useFetch"
 import { useStringminimize } from "../Hocks/useStringMinimize"
 import { useNavigate } from "react-router-dom"
@@ -7,7 +7,6 @@ const Searchbox=()=>{
     let [query,setQuery]=useState('')
     let [data]= useFetch('search/movie',{query})
     let navigate=useNavigate()
-    console.log(query)
 
     const hadleMovie=(movieId)=>{
       navigate(`Movie/${movieId}`)
