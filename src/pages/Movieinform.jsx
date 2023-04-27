@@ -21,11 +21,11 @@ const Movieinform=()=>{
                         <h1>{data?.title}</h1>
                         <h3>{data?.tagline}</h3>
                     </div>
-                    <div className="moviePlot">{data?.overview}</div>
+                    <div className="moviePlot"><p>{data?.overview}</p></div>
 
                     <div className="movieDetails"  >
                          <MovieDetails {...{data,items:'spoken_languages', name:'english_name',uniqeu:'iso_639_1',leftTitle:'Language'}} />
-                         <MovieDetails {...{data,items:'genres', name:'name',uniqeu:'id',leftTitle:'genres'}} />
+                         <MovieDetails {...{data,items:'genres', name:'name',uniqeu:'id',leftTitle:'genres'}}  />
                          <div className="movieDetailsItem">
                            <h3>Runtime</h3>
                             <div><p>{data.runtime}</p></div>

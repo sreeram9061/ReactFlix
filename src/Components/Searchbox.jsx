@@ -14,7 +14,7 @@ const Searchbox=()=>{
 
     return(
       <div className="searchBox">
-        <input className="searchField" value={query} type="search"
+        <input className="searchField" value={query} type="search" placeholder="Serch Movies"
          onChange={(e)=>setQuery(e.target.value)} />
          <div className="resultBox">
             <ul>
