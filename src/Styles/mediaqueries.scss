@@ -1,0 +1,44 @@
+@import "reset";
+@import "colors";
+@import "mixins";
+
+@media (max-width: 600px) {
+    .appHeader {
+        @include flexbox(column, center, space-between, 20px);
+        .headerLeft {
+            width: 100%;
+        }
+    }
+    .searchBox {
+        max-width: none;
+    }
+    .moviePage{
+        .movieContent {
+            grid-template-columns: 1fr;
+            .movieInfo {
+                .movieDetails {
+                    .movieDetailsItem {
+                        align-items: start;
+                        .childs{
+                            display: flex;
+                            flex-direction: column;
+                            padding-top: 4px;
+                        }
+                    }
+
+                }
+            }
+           
+        }
+
+    }
+
+    
+
+
+
+    
+
+    
+
+}
